@@ -1,0 +1,85 @@
+:root {
+    --mainFont: "Nunito", sans-serif;
+    --mainColor: rgb(207, 243, 255)
+}
+
+body {
+    font-family: var(--mainFont);
+    background-color: var(--mainColor);
+
+}
+
+.login {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login__container {
+    background-color: rgb(245, 255, 255);
+    width: 35%;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 2px 2px 9px rgb(100, 100, 100);
+}
+
+.login__title {
+    margin-bottom: 10px;
+
+}
+
+.form {
+    text-align: left;
+    display: flex;
+    gap: 10px;
+    padding: 10px 20px;
+    flex-direction: column;
+}
+
+.form__label {
+    margin-top: 2px;
+    font-weight: 700;
+}
+
+.form__input {
+    border: gray 2px solid;
+    border-radius: 8px;
+    margin-top: -2px;
+    padding: 10px 8px;
+    transition: outline .2s ease-in-out;
+}
+
+.form__input:focus {
+    border: none;
+    outline: rgb(29, 212, 245) 2px solid;
+}
+
+.form__buttons {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__button {
+    text-decoration: none;
+    color: black;
+    padding: 7px 3px;
+    background-color: rgb(29, 212, 245);
+    border: none;
+    border-radius: 2px;
+    width: 20%;
+    transition: all .2s ease;
+}
+
+.form__button:hover {
+    background-color: rgb(15, 186, 216);
+
+}
+
+.form__button>a {
+    text-decoration: none;
+    color: black;
+
+}
