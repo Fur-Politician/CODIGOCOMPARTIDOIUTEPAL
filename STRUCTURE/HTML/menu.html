@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../CSS/menu.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">LOGO</div>
+        <div class="search-bar">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" placeholder="BUSQUEDA">
+        </div>
+        <div class="date-dropdown" id="dateDropdown">
+            <span id="selectedDate"></span>
+            <span class="dropdown-icon">&#9660;</span>
+            <div id="monthYearMenu" style="display:none;">
+                <select id="monthSelect">
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9" selected>Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                <select id="yearSelect">
+                    <!-- Years will be populated by JS -->
+                </select>
+                <button id="setMonthYear">OK</button>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <aside class="sidebar">
+            <div class="sidebar-title">CARRERAS</div>
+            <button>INFORMÁTICA</button>
+            <button>PRODUCCIÓN INDUSTRIAL</button>
+            <button>ELECTRÓNICA</button>
+            <button>ENFERMERÍA</button>
+            <button>CONTABILIDAD</button>
+            <button>ADMINISTRACIÓN DE EMPRESAS</button>
+            
+        </aside>
+        <section class="documents">
+            <div class="doc-card">
+                <div class="doc-icon"></div>
+                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"></div>
+                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"></div>
+                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"></div>
+                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"></div>
+                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"></div>
+                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"></div>
+                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+            </div>
+            <div class="doc-card">
+                <div class="doc-icon"></div>
+                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+            </div>
+        </section>
+    </main>
+    <script src="../SCRIPTS/menu.js"></script>
+</body>
+</html>
