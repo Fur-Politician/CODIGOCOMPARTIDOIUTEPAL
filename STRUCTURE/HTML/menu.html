@@ -17,70 +17,57 @@
             <span id="selectedDate"></span>
             <span class="dropdown-icon">&#9660;</span>
             <div id="monthYearMenu" style="display:none;">
-                <select id="monthSelect">
-                    <option value="1">Enero</option>
-                    <option value="2">Febrero</option>
-                    <option value="3">Marzo</option>
-                    <option value="4">Abril</option>
-                    <option value="5">Mayo</option>
-                    <option value="6">Junio</option>
-                    <option value="7">Julio</option>
-                    <option value="8">Agosto</option>
-                    <option value="9" selected>Septiembre</option>
-                    <option value="10">Octubre</option>
-                    <option value="11">Noviembre</option>
-                    <option value="12">Diciembre</option>
-                </select>
                 <select id="yearSelect">
+                    <option value="todos">Todos</option>
                     <!-- Years will be populated by JS -->
                 </select>
-                <button id="setMonthYear">OK</button>
+                <button id="setYear">OK</button>
             </div>
         </div>
     </header>
     <main class="main-content">
         <aside class="sidebar">
             <div class="sidebar-title">CARRERAS</div>
-            <button>INFORMÁTICA</button>
-            <button>PRODUCCIÓN INDUSTRIAL</button>
-            <button>ELECTRÓNICA</button>
-            <button>ENFERMERÍA</button>
-            <button>CONTABILIDAD</button>
-            <button>ADMINISTRACIÓN DE EMPRESAS</button>
+            <button data-carrera="INFORMATICA">INFORMÁTICA</button>
+            <button data-carrera="PRODUCCION">PRODUCCIÓN INDUSTRIAL</button>
+            <button data-carrera="ELECTRONICA">ELECTRÓNICA</button>
+            <button data-carrera="ENFERMERIA">ENFERMERÍA</button>
+            <button data-carrera="CONTABILIDAD">CONTABILIDAD</button>
+            <button data-carrera="ADMINISTRACION">ADMINISTRACIÓN DE EMPRESAS</button>
             
         </aside>
         <section class="documents">
-            <div class="doc-card">
+            <div class="doc-card" data-carrera="INFORMATICA" data-ano="2023">
                 <div class="doc-icon"></div>
-                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+                <div class="doc-info">Algoritmos, Informática, 2023</div>
             </div>
-            <div class="doc-card">
+            <div class="doc-card" data-carrera="PRODUCCION" data-ano="2022">
                 <div class="doc-icon"></div>
-                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+                <div class="doc-info">Gestión de Procesos, Producción Industrial, 2022</div>
             </div>
-            <div class="doc-card">
+            <div class="doc-card" data-carrera="ELECTRONICA" data-ano="2021">
                 <div class="doc-icon"></div>
-                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+                <div class="doc-info">Circuitos Digitales, Electrónica, 2021</div>
             </div>
-            <div class="doc-card">
+            <div class="doc-card" data-carrera="ENFERMERIA" data-ano="2020">
                 <div class="doc-icon"></div>
-                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+                <div class="doc-info">Cuidados Básicos, Enfermería, 2020</div>
             </div>
-            <div class="doc-card">
+            <div class="doc-card" data-carrera="CONTABILIDAD" data-ano="2024">
                 <div class="doc-icon"></div>
-                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+                <div class="doc-info">Auditoría, Contabilidad, 2024</div>
             </div>
-            <div class="doc-card">
+            <div class="doc-card" data-carrera="ADMINISTRACION" data-ano="2025">
                 <div class="doc-icon"></div>
-                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+                <div class="doc-info">Planificación Empresarial, Administración de Empresas, 2025</div>
             </div>
-            <div class="doc-card">
+            <div class="doc-card" data-carrera="INFORMATICA" data-ano="2022">
                 <div class="doc-icon"></div>
-                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+                <div class="doc-info">Bases de Datos, Informática, 2022</div>
             </div>
-            <div class="doc-card">
+            <div class="doc-card" data-carrera="ENFERMERIA" data-ano="2023">
                 <div class="doc-icon"></div>
-                <div class="doc-info">TRABAJO, CARRERA, AÑO</div>
+                <div class="doc-info">Anatomía, Enfermería, 2023</div>
             </div>
         </section>
     </main>
