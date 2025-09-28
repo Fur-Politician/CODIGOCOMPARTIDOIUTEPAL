@@ -5,16 +5,20 @@ body {
 }
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #00bcd4; /* Azul igual que barra de búsqueda */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #999;
     padding: 10px 30px;
 }
 
 .logo {
     font-size: 1.5em;
     font-weight: bold;
+    color: #fff; /* Mejor contraste en azul */
 }
 
 .search-bar {
@@ -29,12 +33,13 @@ body {
 .search-icon {
     font-size: 1.5em;
     margin-right: 10px;
+    color: #fff; /* Mejor contraste en azul */
 }
 
 .search-bar input {
     border: none;
-    background: #fff; /* Fondo blanco */
-    color: #000;      /* Letras negras */
+    background: #fff; 
+    color: #000;      
     font-size: 1em;
     width: 100%;
     outline: none;
@@ -95,7 +100,10 @@ body {
 }
 
 .sidebar {
-    background: #00bcd4;
+    position: sticky;
+    top: 70px; /* Ajusta según la altura de la barra de búsqueda/header */
+    z-index: 99;
+    background: #00bcd4; /* Azul igual que barra de búsqueda */
     padding: 20px 0;
     width: 220px;
     display: flex;
@@ -104,18 +112,19 @@ body {
 }
 
 .sidebar-title {
-    background: #fff;
-    color: #00bcd4;
+    background: #008ba3; /* Azul más oscuro */
+    color: #fff;
     font-weight: bold;
     padding: 10px 30px;
     border-radius: 10px;
     margin-bottom: 15px;
     font-size: 1.1em;
+    cursor: pointer;
 }
 
 .sidebar button {
     background: #fff;
-    color: #000; /* Changed from #00bcd4 to black */
+    color: #000; 
     border: none;
     border-radius: 25px;
     padding: 10px 20px;
@@ -124,6 +133,12 @@ body {
     font-size: 1em;
     cursor: pointer;
     text-align: left;
+}
+
+.sidebar button.selected {
+    background: #4dd0e1; /* Tono más claro que #00bcd4 */
+    color: #fff;
+    font-weight: bold;
 }
 
 .documents {
@@ -141,6 +156,32 @@ body {
     align-items: center;
 }
 
+.doc-card.old-doc {
+    position: relative;
+    opacity: 0.7;
+    border: 2px solid red;
+}
+
+.doc-card .doc-x {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 2em;
+    color: red;
+    pointer-events: none;
+    z-index: 4;
+    font-weight: bold;
+    background: white;
+    border-radius: 50%;
+    padding: 0 8px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+    display: none;
+}
+
+.doc-card.old-doc .doc-x {
+    display: block;
+}
+
 .doc-icon {
     width: 100px;
     height: 120px;
@@ -152,4 +193,64 @@ body {
     text-align: center;
     font-size: 1em;
     color: #333;
+}
+
+#addTrabajoBtn {
+    margin-top: 20px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    position: relative;
+    min-width: 300px;
+    max-width: 90vw;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #888;
+}
+
+#addTrabajoForm label {
+    display: block;
+    margin-top: 10px;
+}
+#addTrabajoForm input, #addTrabajoForm select {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 6px;
+    box-sizing: border-box;
+}
+#addTrabajoForm button[type="submit"] {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 10px;
 }
