@@ -3,7 +3,7 @@ const validarUsuario  = (e) =>{
        if($inputUser.value === user.username &&
           $inputPassword.value === user.password){
             
-           window.location.replace("menu.html");
+           window.location.replace(".../STRUCTURE/HTML/menu.html");
            
    
        } else{
