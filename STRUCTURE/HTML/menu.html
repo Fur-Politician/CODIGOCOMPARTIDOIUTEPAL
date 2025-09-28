@@ -19,7 +19,7 @@
             <div id="monthYearMenu" style="display:none;">
                 <select id="yearSelect">
                     <option value="todos">Todos</option>
-                    <!-- Years will be populated by JS -->
+                    <!-- LAs opciones son generadas por JS -->
                 </select>
                 <button id="setYear">OK</button>
             </div>
@@ -34,43 +34,77 @@
             <button data-carrera="ENFERMERIA">ENFERMERÍA</button>
             <button data-carrera="CONTABILIDAD">CONTABILIDAD</button>
             <button data-carrera="ADMINISTRACION">ADMINISTRACIÓN DE EMPRESAS</button>
-            
+            <button id="addTrabajoBtn">Añadir trabajo</button>
         </aside>
         <section class="documents">
             <div class="doc-card" data-carrera="INFORMATICA" data-ano="2023">
+                <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Algoritmos, Informática, 2023</div>
             </div>
             <div class="doc-card" data-carrera="PRODUCCION" data-ano="2022">
+                <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Gestión de Procesos, Producción Industrial, 2022</div>
             </div>
             <div class="doc-card" data-carrera="ELECTRONICA" data-ano="2021">
+                <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Circuitos Digitales, Electrónica, 2021</div>
             </div>
             <div class="doc-card" data-carrera="ENFERMERIA" data-ano="2020">
+                <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Cuidados Básicos, Enfermería, 2020</div>
             </div>
             <div class="doc-card" data-carrera="CONTABILIDAD" data-ano="2024">
+                <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Auditoría, Contabilidad, 2024</div>
             </div>
             <div class="doc-card" data-carrera="ADMINISTRACION" data-ano="2025">
+                <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Planificación Empresarial, Administración de Empresas, 2025</div>
             </div>
             <div class="doc-card" data-carrera="INFORMATICA" data-ano="2022">
+                <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Bases de Datos, Informática, 2022</div>
             </div>
             <div class="doc-card" data-carrera="ENFERMERIA" data-ano="2023">
+                <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Anatomía, Enfermería, 2023</div>
             </div>
         </section>
     </main>
+    <!-- Modal para añadir trabajo -->
+    <div id="addTrabajoModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModalBtn">&times;</span>
+            <h2>Añadir trabajo</h2>
+            <form id="addTrabajoForm">
+                <label>Nombre del trabajo:</label>
+                <input type="text" id="trabajoNombre" required>
+                <label>Carrera:</label>
+                <select id="trabajoCarrera" required>
+                    <option value="">Seleccione</option>
+                    <option value="INFORMATICA">INFORMÁTICA</option>
+                    <option value="PRODUCCION">PRODUCCIÓN INDUSTRIAL</option>
+                    <option value="ELECTRONICA">ELECTRÓNICA</option>
+                    <option value="ENFERMERIA">ENFERMERÍA</option>
+                    <option value="CONTABILIDAD">CONTABILIDAD</option>
+                    <option value="ADMINISTRACION">ADMINISTRACIÓN DE EMPRESAS</option>
+                </select>
+                <label>Año:</label>
+                <input type="number" id="trabajoAno" min="2000" max="2025" required>
+                <label>Archivo PDF:</label>
+                <input type="file" id="trabajoPdf" accept="application/pdf" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
     <script src="../SCRIPTS/menu.js"></script>
 </body>
 </html>
