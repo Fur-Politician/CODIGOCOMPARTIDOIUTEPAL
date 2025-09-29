@@ -153,7 +153,8 @@ body {
 .doc-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+    cursor: pointer;
 }
 
 .doc-card.old-doc {
