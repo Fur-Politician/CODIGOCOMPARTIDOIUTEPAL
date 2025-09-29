@@ -1,33 +1,28 @@
-const validarUsuario  = (e) =>{
+const validarUsuario  = (e) => {
     e.preventDefault();
-       if($inputUser.value === user.username &&
-          $inputPassword.value === user.password){
-            
-           window.location.replace(".../STRUCTURE/HTML/menu.html");
-           
-   
-       } else{
-           alert("Datos Invalidos");
-       }
-   }
-   
-   let user = {
-       username: "admin",
-       password: "123",
-   }
-   
-   let $inputUser = document.querySelector("#user"),
-       $inputPassword = document.querySelector("#password"),
-       $button = document.querySelector("#send"),
-       $formInput = document.querySelector(".form");
-   
-   $formInput.addEventListener("submit", (e)=>{
-       
-           validarUsuario(e);
-         
-       
-   });
-   $button.addEventListener("click", (e)=>{
-       e.preventDefault();
-      validarUsuario(e);
-   })
+
+    const username = $inputUser.value.trim();
+    const password = $inputPassword.value.trim();
+
+    if (!username || !password) {
+        alert("Por favor, complete todos los campos.");
+        return;
+    }
+
+    if (username === user.username && password === user.password) {
+        window.location.href = "STRUCTURE/HTML/menu.html";
+    } else {
+        alert("Usuario o contraseña incorrectos.");
+    }
+}
+
+let user = {
+    username: "admin",
+    password: "123",
+}
+
+let $inputUser = document.querySelector("#user"),
+    $inputPassword = document.querySelector("#password"),
+    $formInput = document.querySelector(".form");
+
+$formInput.addEventListener("submit", validarUsuario);
