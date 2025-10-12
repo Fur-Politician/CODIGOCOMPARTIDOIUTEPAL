@@ -6,7 +6,10 @@
 body {
     font-family: var(--mainFont);
     background-color: var(--mainColor);
-
+    background-image: url("../IMG/iutepal_fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 30%;
 }
 
 .login {
@@ -18,9 +21,10 @@ body {
 }
 
 .login__container {
-    background-color: rgb(245, 255, 255);
+    background-color: rgb(255, 255, 255);
     width: 35%;
     text-align: center;
+    
     padding: 15px;
     box-shadow: 2px 2px 9px rgb(100, 100, 100);
 }
@@ -53,7 +57,7 @@ body {
 
 .form__input:focus {
     border: none;
-    outline: rgb(29, 212, 245) 2px solid;
+    outline: rgb(24, 73, 136) 2px solid;
 }
 
 .form__buttons {
@@ -64,9 +68,11 @@ body {
 
 .form__button {
     text-decoration: none;
+    font-weight: 700;
     color: black;
     padding: 7px 3px;
-    background-color: rgb(29, 212, 245);
+    background-color: rgb(1, 54, 151);
+    color: white;
     border: none;
     border-radius: 2px;
     width: 20%;
@@ -74,12 +80,13 @@ body {
 }
 
 .form__button:hover {
-    background-color: rgb(15, 186, 216);
+    background-color: rgb(4, 42, 110);
+    color: white;
 
 }
 
 .form__button>a {
     text-decoration: none;
-    color: black;
+    color: white
 
 }

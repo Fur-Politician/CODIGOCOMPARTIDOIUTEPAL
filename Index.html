@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="STRUCTURE/CSS/login.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
+    <title>Bienvenido - IUTEPAL</title>
+    <link rel="stylesheet" href="STRUCTURE/CSS/bienvenida.css">
 </head>
-
 <body>
-    <main class="login">
-        <div class="login__container">
-            <h1 class="login__title">Inicia Sesión</h1>
-            <form class="form">
-                <label for="user" class="form__label">Nombre de usuario:</label>
-                <input type="text" class="form__input" id="user">
-                <label for="password" class="form__label">Contraseña:</label>
-                <input type="password" class="form__input" id="password" >
-                <div class="form__buttons">
-
-                    <button class="form__button"> <a href="index.html">Cancelar </a></button>
-                    <button class="form__button" id="send">Aceptar</button>
+    <div class="container">
+        <div class="left-panel">
+            <img src="STRUCTURE/IMG/iutepal_logo.png" alt="IUTEPAL Logo" class="logo">
+            <div class="hero-image-container">
                 </div>
-            </form>
         </div>
-    </main>
-    <script src="STRUCTURE/SCRIPTS/login.js"></script>
-</body>
+        <div class="right-panel">
+            <h1 class="welcome-text">Bienvenido</h1>
+            <h2 class="login-text">INICIO DE SESION</h2>
+            
+            <button class="btn"><a href="login-admin.html">PERSONAL</a></button>
+            <button class="btn">VISITANTE</button>
+            <div class="time-display" id="time-display">HORA</div>
+        </div>
+    </div>
 
+    <script src="STRUCTURE/SCRIPTS/bienvenida.js"></script>
+</body>
 </html>
