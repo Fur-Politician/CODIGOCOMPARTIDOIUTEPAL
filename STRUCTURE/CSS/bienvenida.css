@@ -1,0 +1,155 @@
+/* RESET BÁSICO para asegurar que no haya márgenes por defecto */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ocupar 100% del ancho de la página */
+    height: 100%; /* Ocupar 100% del alto de la página */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5; /* Un color de fondo suave */
+    overflow: hidden; /* Evitar barras de desplazamiento si el contenido no lo requiere */
+}
+
+.container {
+    display: flex;
+    width: 100vw; /* Ocupar 100% del ancho del viewport */
+    height: 100vh; /* Ocupar 100% del alto del viewport */
+    box-shadow: none; /* Quitamos la sombra, ya que ocupa toda la pantalla */
+    background-color: #fff;
+    /* border-radius: 8px; */ /* Quitamos el border-radius */
+    overflow: hidden; 
+}
+
+.left-panel {
+    width: 60%; /* Ajusta según la imagen */
+   
+     background-image:  url("../IMG/iutepal_hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding: 40px; /* Incrementamos el padding para mejor espaciado en pantalla completa */
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 200px; /* Ajusta el tamaño del logo */
+    height: auto;
+    /* Ajustes para que el logo se vea bien sobre la imagen de fondo */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); 
+  
+}
+
+.right-panel {
+    width: 40%; /* Ajusta según la imagen */
+    background-color: #1a237e; /* Azul oscuro similar al de la imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.welcome-text {
+    font-size: 3.5em; /* Ligeramente más grande */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.login-text {
+    font-size: 1.8em; /* Ligeramente más grande */
+    margin-bottom: 70px;
+    font-weight: normal;
+}
+
+.btn {
+    background-color: white;
+    color: #1a237e;
+    border: none;
+    padding: 18px 45px; /* Más padding para botones grandes */
+    margin: 20px 0; /* Más margen entre botones */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 70%; 
+    max-width: 350px;
+    transition: background-color 0.3s ease;
+}
+
+.btn a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+.time-display {
+    position: absolute;
+    bottom: 30px; /* Ligeramente más arriba */
+    right: 30px; /* Ligeramente más a la izquierda */
+    font-size: 1.4em; /* Ligeramente más grande */
+    font-weight: bold;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* Permite que el contenido determine la altura total */
+        min-height: 100vh; /* Asegura que al menos ocupe la altura de la ventana */
+    }
+
+    .left-panel {
+        width: 100%;
+        height: 40vh; /* Altura para el panel superior en móvil */
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .right-panel {
+        width: 100%;
+        height: 60vh; /* Altura para el panel inferior en móvil */
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .welcome-text {
+        font-size: 2.5em;
+    }
+
+    .login-text {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        margin: 10px 0;
+        width: 70%;
+    }
+
+    .time-display {
+        bottom: 15px;
+        right: 15px;
+        font-size: 1em;
+    }
+}
