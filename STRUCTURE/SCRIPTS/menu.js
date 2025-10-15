@@ -1,3 +1,78 @@
+const trabajosDeGrado = [
+  {
+    nombre: "ESTRATEGIAS PARA EL MEJORAMIENTO EN EL PROCESO DE CALCULO, PAGO Y RETENCION DEL IMPUESTO AL VALOR AGREGADO (I.V.A.) EN LA EMPRESA RECTIFICADORA DE MOTORESJ&D C.A. DE MORÓN ESTADO CARABOBO",
+    año: 2018,
+    carrera: "ADMINISTRACION",
+    pdf: "STRUCTURE/PDFs/TRABAJO DE GRADO MIXARI Y YOSMERY (1).pdf" // 
+  },
+  {
+    nombre: "Diseño de un Sistema automatizado que registre y controle la matrícula de los alumnos de la Escuela Básica Nacional “Taborda”, ubicada en Puerto Cabello, Estado Carabobo.",
+    año: 2018,
+    carrera: "INFORMATICA",
+    pdf: "STRUCTURE/PDFs/TRABAJO DE GRADO INFORMATICA.pdf" // 
+  },
+//   {
+//     nombre: "Modelado Financiero Avanzado",
+//     año: 2024,
+//     carrera: "Administración de Empresas",
+//     pdf: "ruta/al/pdf/financiero.pdf" 
+//   }
+  // ... más trabajos
+];
+
+localStorage.setItem('trabajosDeGrado', JSON.stringify(trabajosDeGrado));
+
+// Obtener y parsear los datos
+const data = localStorage.getItem('trabajosDeGrado');
+const trabajos = JSON.parse(data) || []; // Usa un array vacío si no hay datos
+const contenedorCards = document.querySelector('.documents');
+const docCards = document.querySelectorAll('.doc-card');
+
+trabajos.forEach(trabajo => {
+
+    console.log(contenedorCards)
+    // 1. Crear el elemento Card
+    const card = document.createElement('div');
+    card.className = 'doc-card';
+    // 2. Asignar la ruta del PDF como un atributo de datos
+    // Esto es clave para el paso 4
+    card.dataset.pdfUrl = trabajo.pdf; 
+    card.dataset.carrera = trabajo.carrera.toUpperCase(); 
+    card.dataset.ano = trabajo.año; 
+    
+    
+    // 3. Rellenar el contenido de la Card
+    card.innerHTML =`
+    
+        <div class="doc-x" style="display:none;">&#10006;</div>
+        <div class="doc-icon"></div>
+        <div class="doc-info">${trabajo.nombre}, ${trabajo.carrera.charAt(0).toUpperCase() + trabajo.carrera.slice(1).toLowerCase().replace('_', ' ')}, ${trabajo.año}</div>
+     
+   `
+    ;
+    
+    contenedorCards.appendChild(card);
+});
+// Escuchar los clics en todos los botones "Ver PDF"
+document.querySelectorAll('.doc-card').forEach(card => {
+  card.addEventListener('click', (event) => {
+    // 1. Prevenir que el click en el botón afecte la Card completa si usaste un div para la Card.
+    // Aunque si pones el event listener en la Card, no hace falta.
+    
+    // 2. Obtener la URL del PDF del atributo de datos
+    const pdfUrl = card.dataset.pdfUrl;
+    console.log(pdfUrl)
+    if (pdfUrl) {
+      // 3. Abrir la URL del PDF en una nueva pestaña/ventana
+      window.open(pdfUrl, '_blank');
+      // 👉 EL NAVEGADOR MANEJARÁ LA VISUALIZACIÓN del PDF.
+    } else {
+      console.error('Ruta de PDF no encontrada para esta tarjeta.');
+    }
+  });
+});
+
+
 // Manejo del menú desplegable de fecha
 const dateDropdown = document.getElementById('dateDropdown');
 const selectedDate = document.getElementById('selectedDate');
@@ -5,7 +80,7 @@ const monthYearMenu = document.getElementById('monthYearMenu');
 const yearSelect = document.getElementById('yearSelect');
 const setYear = document.getElementById('setYear');
 
-const docCards = document.querySelectorAll('.doc-card');
+
 
 // Obtener el año más bajo de los trabajos
 let minYear = Infinity;
