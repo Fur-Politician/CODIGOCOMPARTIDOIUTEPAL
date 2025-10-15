@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="stylesheet" href="STRUCTURE/CSS/menu.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo">LOGO</div>
+        <img src="STRUCTURE/IMG/iutepal_logo.png" alt="" class="logo">
         <div class="search-bar">
             <span class="search-icon">&#128269;</span>
             <input type="text" placeholder="BUSQUEDA">
@@ -31,7 +31,6 @@
             <button data-carrera="INFORMATICA">INFORMÁTICA</button>
             <button data-carrera="PRODUCCION">PRODUCCIÓN INDUSTRIAL</button>
             <button data-carrera="ELECTRONICA">ELECTRÓNICA</button>
-            <button data-carrera="ENFERMERIA">ENFERMERÍA</button>
             <button data-carrera="CONTABILIDAD">CONTABILIDAD</button>
             <button data-carrera="ADMINISTRACION">ADMINISTRACIÓN DE EMPRESAS</button>
             <button id="addTrabajoBtn">Añadir trabajo</button>
@@ -52,10 +51,6 @@
                 <div class="doc-icon"></div>
                 <div class="doc-info">Circuitos Digitales, Electrónica, 2021</div>
             </div>
-            <div class="doc-card" data-carrera="ENFERMERIA" data-ano="2020">
-                <div class="doc-x" style="display:none;">&#10006;</div>
-                <div class="doc-icon"></div>
-                <div class="doc-info">Cuidados Básicos, Enfermería, 2020</div>
             </div>
             <div class="doc-card" data-carrera="CONTABILIDAD" data-ano="2024">
                 <div class="doc-x" style="display:none;">&#10006;</div>
@@ -71,11 +66,6 @@
                 <div class="doc-x" style="display:none;">&#10006;</div>
                 <div class="doc-icon"></div>
                 <div class="doc-info">Bases de Datos, Informática, 2022</div>
-            </div>
-            <div class="doc-card" data-carrera="ENFERMERIA" data-ano="2023">
-                <div class="doc-x" style="display:none;">&#10006;</div>
-                <div class="doc-icon"></div>
-                <div class="doc-info">Anatomía, Enfermería, 2023</div>
             </div>
         </section>
     </main>
@@ -93,7 +83,6 @@
                     <option value="INFORMATICA">INFORMÁTICA</option>
                     <option value="PRODUCCION">PRODUCCIÓN INDUSTRIAL</option>
                     <option value="ELECTRONICA">ELECTRÓNICA</option>
-                    <option value="ENFERMERIA">ENFERMERÍA</option>
                     <option value="CONTABILIDAD">CONTABILIDAD</option>
                     <option value="ADMINISTRACION">ADMINISTRACIÓN DE EMPRESAS</option>
                 </select>
@@ -105,6 +94,6 @@
             </form>
         </div>
     </div>
-    <script src="../SCRIPTS/menu.js"></script>
+    <script src="STRUCTURE/SCRIPTS/menu.js"></script>
 </body>
 </html>

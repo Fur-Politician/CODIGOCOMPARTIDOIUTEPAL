@@ -15,3 +15,18 @@ function updateTime() {
 // Actualizar la hora inmediatamente y luego cada segundo
 updateTime();
 setInterval(updateTime, 1000);
+
+const personalBtn = document.querySelector(".btn-personal");
+
+personalBtn.addEventListener("click", (e)=>{
+
+    e.preventDefault();
+    window.location.href = "login-admin.html"
+})
+const guestBtn = document.querySelector(".btn-guest");
+
+guestBtn.addEventListener("click", (e)=>{
+
+    e.preventDefault();
+    window.location.href = "login-guest.html"
+})

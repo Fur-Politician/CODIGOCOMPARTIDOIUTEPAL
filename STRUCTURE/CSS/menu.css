@@ -8,7 +8,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: #00bcd4; /* Azul igual que barra de búsqueda */
+    background: #1a237e; /* Azul igual que barra de búsqueda */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,13 +18,17 @@ body {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: #fff; /* Mejor contraste en azul */
+    background-color: #e0e0e0;
+    border: 2px solid black;
+    width: 70px;
+    height: auto;
+    margin-right: 10px;
 }
 
 .search-bar {
     display: flex;
     align-items: center;
-    background: #00bcd4;
+    background: #1a237e;
     border-radius: 25px;
     padding: 5px 15px;
     width: 400px;
@@ -85,7 +89,7 @@ body {
     padding: 5px 12px;
     border: none;
     border-radius: 5px;
-    background: #00bcd4;
+    background: #1a237e;
     color: #fff;
     cursor: pointer;
 }
@@ -103,7 +107,7 @@ body {
     position: sticky;
     top: 70px; /* Ajusta según la altura de la barra de búsqueda/header */
     z-index: 99;
-    background: #00bcd4; /* Azul igual que barra de búsqueda */
+    background: #151c63; /* Azul igual que barra de búsqueda */
     padding: 20px 0;
     width: 220px;
     display: flex;
@@ -112,7 +116,7 @@ body {
 }
 
 .sidebar-title {
-    background: #008ba3; /* Azul más oscuro */
+    background: #2834bb; /* Azul más oscuro */
     color: #fff;
     font-weight: bold;
     padding: 10px 30px;
