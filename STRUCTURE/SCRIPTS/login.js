@@ -9,6 +9,8 @@ const validarUsuario  = (e) => {
         return;
     }
 
+    //elias arregla esto
+
     if (username === user.username && password === user.password) {
         window.location.href = "STRUCTURE/HTML/menu.html";
     } else {

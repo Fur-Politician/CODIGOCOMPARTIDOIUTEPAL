@@ -42,10 +42,10 @@ body {
 }
 
 .logo {
-    width: 200px; /* Ajusta el tamaño del logo */
+    width: 250px; /* Ajusta el tamaño del logo */
     height: auto;
     /* Ajustes para que el logo se vea bien sobre la imagen de fondo */
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); 
+    filter: drop-shadow(5px 0px 1px rgba(255, 255, 255, 0.9)); 
   
 }
 
